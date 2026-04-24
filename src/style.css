@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    font-family: 'DM Sans', sans-serif;
+  }
+
+  body {
+    @apply bg-paper text-ink overflow-x-hidden;
+  }
+}
+
+@layer utilities {
+  .section-label {
+    @apply flex items-center gap-4 mb-12;
+  }
+
+  .section-label::before {
+    content: '';
+    @apply block w-8 h-px bg-accent flex-shrink-0;
+  }
+
+  .timeline-dot::before {
+    content: '';
+    @apply absolute -left-[1.65rem] top-1.5 w-2 h-2 rounded-full bg-accent;
+  }
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes barGrow {
+  from { transform: scaleX(0); }
+  to   { transform: scaleX(1); }
+}
+
+.animate-fade-up {
+  animation: fadeUp 0.7s ease both;
+}
+
+.animate-bar {
+  animation: barGrow 1.2s ease forwards;
+  transform-origin: left;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-220 { animation-delay: 0.22s; }
+.delay-350 { animation-delay: 0.35s; }
