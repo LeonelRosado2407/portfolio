@@ -68,6 +68,6 @@ const contactItems = [
   { label: 'Phone / WhatsApp', icon: IconPhone,    value: '+52 999 342 7756',           href: null },
   { label: 'Location',         icon: IconLocation, value: 'Mérida, Yucatán · Remote worldwide', href: null },
   { label: 'GitHub',           icon: IconGithub,   value: 'LeonelRosado2407',           href: 'https://github.com/LeonelRosado2407' },
-  { label: 'LinkedIn',         icon: IconLinkedIn, value: 'Noé Leonel Rosado Quintal',  href: 'https://linkedin.com/in/noe-leonel-rosado-quintal' },
+  { label: 'LinkedIn',         icon: IconLinkedIn, value: 'Noé Leonel Rosado Quintal',  href: 'https://www.linkedin.com/in/no%C3%A9-leonel-rosado-quintal-20a701263' },
 ]
 </script>

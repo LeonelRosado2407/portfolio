@@ -1,0 +1,44 @@
+{
+  "nav": {
+    "about": "About",
+    "projects": "Projects",
+    "services": "Services",
+    "contact": "Contact"
+  },
+  "hero": {
+    "open_to_projects": "OPEN TO FREELANCE PROJECTS",
+    "description": "I'm Leonel Rosado — a frontend-focused developer from Mérida, México with 2 years of professional experience building web apps, ERPs, and client portals. I work with React, Vue.js 3, and PHP/Laravel to deliver clean, fast, and usable interfaces.",
+    "btn_wacth_my_work": "Watch my work",
+    "btn_get_in_touch": "Get in touch",
+    "experience": "Years of Experience",
+    "professional_role": "Professional Role",
+    "projects_delivered": "Projects Delivered",
+    "response_time": "Response Time",
+    "core_stack": "Core Stack"
+  },
+  "about": {
+    "title": "About me",
+    "title_2": "Experience",
+    "subtitle": "Building web experiences that actually work",
+    "bio_1": "I'm a software engineer specializing in frontend development, based in Mérida, México. My degree in Digital Business and Virtual Environments gives me a broader view of how technology drives real business outcomes — not just how to write code.",
+    "bio_2":"Over 2 years I've worked on custom web applications, ERPs, accounts-receivable systems, and client portals — always in professional, collaborative environments using agile methodologies.",
+    "bio_3":"I'm now taking on freelance projects through Upwork. I work autonomously, communicate proactively, and bring the same attention to detail from my professional work to every client engagement.",
+    "experiences": {
+      "experience_1": {
+        "period": "MAY 2023 - DEC 2023",
+        "position": "Web Developer Intern",
+        "description": "Built a custom Accounts Receivable system and a customer-facing client portal. First end-to-end experience in a production environment."
+      },
+      "experience_2": {
+        "period": "APR 2024 - OCT 2024",
+        "position": "Junior Web Developer",
+        "description": "Custom web application development. Contributed to building a full ERP system from scratch alongside a cross-functional team."
+      },
+      "experience_3": {
+        "period": "JAN 2025 - DEC 2025",
+        "position": "Software Engineer",
+        "description": "Redesign, development and responsiveness improvements on established web applications. UI/UX enhancement across multiple production products."
+      }
+    }
+  }
+}

@@ -4,7 +4,7 @@
     <!-- Bio -->
     <div>
       <div class="section-label">
-        <span class="font-display font-bold text-xs uppercase tracking-widest2 text-accent">About me</span>
+        <span class="font-display font-bold text-xs uppercase tracking-widest2 text-accent">{{ t('about.title') }}</span>
       </div>
       <h2 class="font-display font-extrabold tracking-tighter leading-tight mb-6"
           style="font-size: clamp(1.9rem, 3.5vw, 2.8rem)">
@@ -38,13 +38,13 @@
              class="relative timeline-dot"
              :class="{ 'pb-8': i < experience.length - 1 }">
           <div class="text-xs font-medium uppercase tracking-wider text-accent mb-1">
-            {{ item.period }}
+            {{ item.period() }}
           </div>
           <div class="font-display font-bold text-sm text-ink mb-1.5">
-            {{ item.role }}
+            {{ item.role() }}
           </div>
           <div class="text-xs text-ink-3 leading-relaxed">
-            {{ item.desc }}
+            {{ item.desc() }}
           </div>
         </div>
       </div>
@@ -54,21 +54,24 @@
 </template>
 
 <script setup>
+import { useI18n } from 'vue-i18n'
+const { t } = useI18n()
+
 const experience = [
   {
-    period: 'Jan 2025 – Dec 2025',
-    role: 'Software Engineer',
-    desc: 'Redesign, development and responsiveness improvements on established web applications. UI/UX enhancement across multiple production products.',
+    period: () => t('about.experiences.experience_3.period'),
+    role: () => t('about.experiences.experience_3.position'),
+    desc: () => t('about.experiences.experience_3.description'),
   },
   {
-    period: 'Apr 2024 – Oct 2024',
-    role: 'Junior Web Developer',
-    desc: 'Custom web application development. Contributed to building a full ERP system from scratch alongside a cross-functional team.',
+    period: () => t('about.experiences.experience_2.period'),
+    role: () => t('about.experiences.experience_2.position'),
+    desc: () => t('about.experiences.experience_2.description'),
   },
   {
-    period: 'May 2023 – Dec 2023',
-    role: 'Web Developer Intern',
-    desc: 'Built a custom Accounts Receivable system and a customer-facing client portal. First end-to-end experience in a production environment.',
+    period: () => t('about.experiences.experience_1.period'),
+    role: () => t('about.experiences.experience_1.position'),
+    desc: () => t('about.experiences.experience_1.description'),
   },
 ]
 </script>

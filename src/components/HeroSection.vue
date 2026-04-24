@@ -16,21 +16,19 @@
       </h1>
 
       <p class="animate-fade-up delay-220 text-ink-2 leading-relaxed max-w-md mb-10">
-        I'm Leonel Rosado — a frontend-focused developer from Mérida, México with 2 years of
-        professional experience building web apps, ERPs, and client portals. I work with
-        React, Vue.js 3, and PHP/Laravel to deliver clean, fast, and usable interfaces.
+       {{t('hero.description')}}
       </p>
 
       <div class="animate-fade-up delay-350 flex flex-wrap gap-4">
         <a href="#projects"
            class="inline-flex items-center gap-2 bg-accent text-white text-sm font-medium
                   px-7 py-3 hover:bg-accent-dark transition-colors duration-200">
-          View my work →
+          {{ t('hero.btn_wacth_my_work') }}
         </a>
         <a href="#contact"
            class="inline-flex items-center gap-2 border border-ink/15 text-ink text-sm font-medium
                   px-7 py-3 hover:border-ink-2 transition-colors duration-200">
-          Get in touch
+          {{ t('hero.btn_get_in_touch') }}
         </a>
       </div>
     </div>
@@ -48,14 +46,14 @@
           <div class="font-display font-extrabold text-5xl tracking-tighter text-accent leading-none mb-1">
             {{ stat.value }}
           </div>
-          <div class="text-xs uppercase tracking-wide text-ink-3">{{ stat.label }}</div>
+          <div class="text-xs uppercase tracking-wide text-ink-3">{{ stat.label() }}</div>
         </div>
       </div>
 
       <!-- Stack -->
       <div class="mt-10">
         <h3 class="font-display font-bold text-xs uppercase tracking-widest text-ink-3 mb-4">
-          Core stack
+          {{ t('hero.core_stack') }}
         </h3>
         <div class="flex flex-wrap gap-1.5">
           <span v-for="tech in stack" :key="tech.name"
@@ -73,11 +71,16 @@
 </template>
 
 <script setup>
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+
+
 const stats = [
-  { value: '2+',   label: 'Years of experience'  },
-  { value: '3',    label: 'Professional roles'    },
-  { value: '5+',   label: 'Projects delivered'    },
-  { value: '24h',  label: 'Response time'         },
+  { value: '2+',   label: () => t('hero.experience')  },
+  { value: '3',    label: () => t('hero.professional_role')    },
+  { value: '5+',   label: () => t('hero.projects_delivered')    },
+  { value: '24h',  label: () => t('hero.response_time')         },
 ]
 
 const stack = [

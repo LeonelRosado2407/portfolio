@@ -1,0 +1,19 @@
+{
+  "nav": {
+    "about": "Acerca de",
+    "projects": "Proyectos",
+    "services": "Servicios",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "open_to_projects": "ABIERTO A PROYECTOS FREELANCE",
+    "description": "Soy Leonel Rosado, un desarrollador frontend de Mérida, México con 2 años de experiencia profesional construyendo aplicaciones web, ERPs y portales para clientes. Trabajo con React, Vue.js 3 y PHP/Laravel para ofrecer interfaces limpias, rápidas y usables.",
+    "btn_wacth_my_work": "Ver mi trabajo",
+    "btn_get_in_touch": "Ponerme en contacto",
+    "experience": "Años de Experiencia",
+    "professional_role": "Rol Profesional",
+    "projects_delivered": "Proyectos Entregados",
+    "response_time": "Tiempo de Respuesta",
+    "core_stack": "Pila Principal"
+  }
+}
