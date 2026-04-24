@@ -41,5 +41,70 @@
         "description": "Redesign, development and responsiveness improvements on established web applications. UI/UX enhancement across multiple production products."
       }
     }
+  },
+  "projects": {
+    "label": "FEATURED WORK",
+    "title": "Projects I've built",
+    "my_role": "My role:",
+    "items": {
+      "project_1": {
+        "title": "Custom ERP System",
+        "desc": "Full enterprise resource planning application covering inventory, purchasing, and reporting modules. Developed in a team environment with agile sprints and a version-controlled codebase.",
+        "role": "Frontend module development — implemented inventory and reporting UIs and integrated them with the backend API."
+      },
+      "project_2": {
+        "title": "Accounts Receivable System",
+        "desc": "Custom-built financial management tool for tracking invoices, payment schedules, and client account balances. Replaced a manual spreadsheet workflow and improved the team's financial visibility.",
+        "role": "Primary developer — designed the DB schema, built all views and logic, delivered as part of my internship."
+      },
+      "project_3": {
+        "title": "Customer Self-Service Portal",
+        "desc": "A B2B-facing portal allowing clients to check their account status, access documents, and submit requests online. Focused heavily on UX clarity and mobile responsiveness.",
+        "role": "End-to-end development — frontend and backend implementation with a UX-first approach throughout."
+      },
+      "project_4": {
+        "title": "Legacy App Redesign & Responsiveness",
+        "desc": "Modernization of multiple existing production web applications — migrating desktop-only layouts to mobile-first designs, refactoring CSS architecture, and improving component structure.",
+        "role": "Led the frontend redesign — assessed existing UIs, proposed improvements, and executed across several live applications."
+      }
+    }
+  },
+  "services": {
+    "label": "WHAT I OFFER",
+    "title": "How I can help",
+    "items": {
+      "service_1": {
+        "title": "Frontend development",
+        "desc": "Custom UI implementation with React or Vue.js 3. Clean, component-based code that's readable, maintainable, and easy for your team to extend."
+      },
+      "service_2": {
+        "title": "Responsive UI & redesigns",
+        "desc": "Make your existing app look and feel great on any screen. I audit layouts, modernize design, and improve usability without breaking what already works."
+      },
+      "service_3": {
+        "title": "Web apps & client portals",
+        "desc": "Business tools, dashboards, and portals built from scratch. I have direct professional experience with these systems and can deliver them reliably."
+      },
+      "service_4": {
+        "title": "PHP / Laravel backends",
+        "desc": "Full-stack when you need it. I can build and connect Laravel APIs, MySQL databases, and auth systems to power your frontend application."
+      }
+    }
+  },
+  "contact": {
+    "label": "GET IN TOUCH",
+    "title": "Let's build something together",
+    "description": "I'm currently available for freelance projects — short or long term. Whether you have a detailed brief or just an early idea, reach out and I'll respond within 24 hours.",
+    "btn_email": "Send me an email →",
+    "items": {
+      "email": "Email",
+      "phone": "Phone / WhatsApp",
+      "location": "Location",
+      "github": "GitHub",
+      "linkedin": "LinkedIn"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Leonel Rosado · Frontend Developer · Mérida, México"
   }
 }

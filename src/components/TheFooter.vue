@@ -4,7 +4,13 @@
       Leonel<span class="text-accent">.</span>
     </span>
     <p class="text-xs text-paper/35">
-      © 2025 Leonel Rosado · Frontend Developer · Mérida, México
+      {{ t('footer.copyright') }}
     </p>
   </footer>
 </template>
+
+<script setup>
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+</script>

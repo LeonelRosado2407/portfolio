@@ -18,28 +18,93 @@
   },
   "about": {
     "title": "Acerca de mí",
-    "title_2": "Experience",
-    "subtitle": "Building web experiences that actually work",
-    "subtitle_2": "Actually Work",
-    "bio_1": "I'm a software engineer specializing in frontend development, based in Mérida, México. My degree in Digital Business and Virtual Environments gives me a broader view of how technology drives real business outcomes — not just how to write code.",
-    "bio_2":"Over 2 years I've worked on custom web applications, ERPs, accounts-receivable systems, and client portals — always in professional, collaborative environments using agile methodologies.",
-    "bio_3":"I'm now taking on freelance projects through Upwork. I work autonomously, communicate proactively, and bring the same attention to detail from my professional work to every client engagement.",
+    "title_2": "Experiencia",
+    "subtitle": "Construyendo experiencias web que realmente",
+    "subtitle_2": "Funcionan",
+    "bio_1": "Soy ingeniero de software especializado en desarrollo frontend, radicado en Mérida, México. Mi licenciatura en Negocios Digitales y Entornos Virtuales me da una visión más amplia de cómo la tecnología impulsa resultados de negocio reales — no solo cómo escribir código.",
+    "bio_2": "Durante más de 2 años he trabajado en aplicaciones web personalizadas, ERPs, sistemas de cuentas por cobrar y portales para clientes — siempre en entornos profesionales y colaborativos con metodologías ágiles.",
+    "bio_3": "Actualmente tomo proyectos freelance a través de Upwork. Trabajo de forma autónoma, me comunico de manera proactiva y aplico el mismo nivel de atención al detalle de mi trabajo profesional en cada compromiso con el cliente.",
     "experiences": {
       "experience_1": {
-        "period": "MAY 2023 - DEC 2023",
-        "position": "Web Developer Intern",
-        "description": "Built a custom Accounts Receivable system and a customer-facing client portal. First end-to-end experience in a production environment."
+        "period": "MAY 2023 - DIC 2023",
+        "position": "Practicante de Desarrollo Web",
+        "description": "Desarrollé un sistema personalizado de Cuentas por Cobrar y un portal de autoservicio para clientes. Primera experiencia completa de extremo a extremo en un entorno de producción."
       },
       "experience_2": {
-        "period": "APR 2024 - OCT 2024",
-        "position": "Junior Web Developer",
-        "description": "Custom web application development. Contributed to building a full ERP system from scratch alongside a cross-functional team."
+        "period": "ABR 2024 - OCT 2024",
+        "position": "Desarrollador Web Junior",
+        "description": "Desarrollo de aplicaciones web personalizadas. Contribuí a la construcción de un ERP completo desde cero junto a un equipo multifuncional."
       },
       "experience_3": {
-        "period": "JAN 2025 - DEC 2025",
-        "position": "Software Engineer",
-        "description": "Redesign, development and responsiveness improvements on established web applications. UI/UX enhancement across multiple production products."
+        "period": "ENE 2025 - DIC 2025",
+        "position": "Ingeniero de Software",
+        "description": "Rediseño, desarrollo y mejoras de responsividad en aplicaciones web existentes. Mejora de UI/UX en múltiples productos en producción."
       }
     }
+  },
+  "projects": {
+    "label": "TRABAJO DESTACADO",
+    "title": "Proyectos que he construido",
+    "my_role": "Mi rol:",
+    "items": {
+      "project_1": {
+        "title": "Sistema ERP Personalizado",
+        "desc": "Aplicación de planificación de recursos empresariales que abarca módulos de inventario, compras e informes. Desarrollada en equipo con sprints ágiles y una base de código con control de versiones.",
+        "role": "Desarrollo del módulo frontend — implementé las interfaces de inventario e informes y las integré con la API del backend."
+      },
+      "project_2": {
+        "title": "Sistema de Cuentas por Cobrar",
+        "desc": "Herramienta de gestión financiera personalizada para rastrear facturas, calendarios de pago y saldos de cuentas de clientes. Reemplazó un flujo de trabajo manual en hojas de cálculo y mejoró la visibilidad financiera del equipo.",
+        "role": "Desarrollador principal — diseñé el esquema de base de datos, construí todas las vistas y la lógica, entregado como parte de mi práctica profesional."
+      },
+      "project_3": {
+        "title": "Portal de Autoservicio para Clientes",
+        "desc": "Portal B2B que permite a los clientes consultar el estado de su cuenta, acceder a documentos y enviar solicitudes en línea. Con énfasis en la claridad de UX y la responsividad móvil.",
+        "role": "Desarrollo completo de extremo a extremo — implementación frontend y backend con un enfoque centrado en UX."
+      },
+      "project_4": {
+        "title": "Rediseño y Responsividad de App Legada",
+        "desc": "Modernización de múltiples aplicaciones web de producción existentes — migrando layouts de escritorio a diseños mobile-first, refactorizando la arquitectura CSS y mejorando la estructura de componentes.",
+        "role": "Lideré el rediseño frontend — analicé las interfaces existentes, propuse mejoras y las ejecuté en varias aplicaciones en vivo."
+      }
+    }
+  },
+  "services": {
+    "label": "LO QUE OFREZCO",
+    "title": "Cómo puedo ayudarte",
+    "items": {
+      "service_1": {
+        "title": "Desarrollo frontend",
+        "desc": "Implementación de UI personalizada con React o Vue.js 3. Código limpio y basado en componentes, legible, mantenible y fácil de extender para tu equipo."
+      },
+      "service_2": {
+        "title": "UI responsiva y rediseños",
+        "desc": "Haz que tu aplicación existente se vea y funcione bien en cualquier pantalla. Audito layouts, modernizo el diseño y mejoro la usabilidad sin romper lo que ya funciona."
+      },
+      "service_3": {
+        "title": "Aplicaciones web y portales",
+        "desc": "Herramientas de negocio, dashboards y portales construidos desde cero. Tengo experiencia profesional directa con estos sistemas y puedo entregarlos de manera confiable."
+      },
+      "service_4": {
+        "title": "Backends con PHP / Laravel",
+        "desc": "Full-stack cuando lo necesitas. Puedo construir y conectar APIs en Laravel, bases de datos MySQL y sistemas de autenticación para potenciar tu aplicación frontend."
+      }
+    }
+  },
+  "contact": {
+    "label": "CONTÁCTAME",
+    "title": "Construyamos algo juntos",
+    "description": "Actualmente estoy disponible para proyectos freelance — cortos o largos. Ya sea que tengas un brief detallado o solo una idea inicial, contáctame y responderé en menos de 24 horas.",
+    "btn_email": "Envíame un correo →",
+    "items": {
+      "email": "Correo",
+      "phone": "Teléfono / WhatsApp",
+      "location": "Ubicación",
+      "github": "GitHub",
+      "linkedin": "LinkedIn"
+    }
+  },
+  "footer": {
+    "copyright": "© 2025 Leonel Rosado · Desarrollador Frontend · Mérida, México"
   }
 }

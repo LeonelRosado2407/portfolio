@@ -22,8 +22,8 @@ export default {
           3: '#8C7B6E',
         },
         paper: {
-          DEFAULT: '#EDE8E0',
-          2: '#B07D62',
+          DEFAULT: '#f5f3ef',
+          2: '#eceae4',
         },
       },
       letterSpacing: {

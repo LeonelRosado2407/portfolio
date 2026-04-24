@@ -1,11 +1,11 @@
 <template>
   <section id="projects" class="bg-ink text-paper px-16 py-24">
     <div class="section-label before:bg-accent">
-      <span class="font-display font-bold text-xs uppercase tracking-widest2 text-accent">Featured work</span>
+      <span class="font-display font-bold text-xs uppercase tracking-widest2 text-accent">{{ t('projects.label') }}</span>
     </div>
     <h2 class="font-display font-extrabold tracking-tighter leading-tight mb-14 text-paper"
         style="font-size: clamp(2rem, 3.5vw, 3rem)">
-      Projects I've built
+      {{ t('projects.title') }}
     </h2>
 
     <div class="grid md:grid-cols-2 gap-px bg-white/5">
@@ -15,10 +15,10 @@
           {{ String(i + 1).padStart(2, '0') }} / {{ String(projects.length).padStart(2, '0') }}
         </span>
         <h3 class="font-display font-bold text-xl tracking-tight text-paper mb-3 leading-snug">
-          {{ project.title }}
+          {{ project.title() }}
         </h3>
         <p class="text-sm text-paper/55 leading-relaxed mb-6">
-          {{ project.desc }}
+          {{ project.desc() }}
         </p>
         <div class="flex flex-wrap gap-1.5 mb-7">
           <span v-for="tag in project.tags" :key="tag"
@@ -27,8 +27,8 @@
           </span>
         </div>
         <p class="text-xs text-paper/40 border-t border-white/[0.06] pt-4 leading-relaxed">
-          <strong class="text-paper/70 font-medium">My role:</strong>
-          {{ project.role }}
+          <strong class="text-paper/70 font-medium">{{ t('projects.my_role') }}</strong>
+          {{ project.role() }}
         </p>
       </div>
     </div>
@@ -36,30 +36,34 @@
 </template>
 
 <script setup>
+import { useI18n } from 'vue-i18n'
+
+const { t } = useI18n()
+
 const projects = [
   {
-    title: 'Custom ERP System',
-    desc: 'Full enterprise resource planning application covering inventory, purchasing, and reporting modules. Developed in a team environment with agile sprints and a version-controlled codebase.',
+    title: () => t('projects.items.project_1.title'),
+    desc:  () => t('projects.items.project_1.desc'),
     tags: ['JavaScript', 'PHP', 'MySQL', 'HTML / CSS', 'SCRUM'],
-    role: 'Frontend module development — implemented inventory and reporting UIs and integrated them with the backend API.',
+    role:  () => t('projects.items.project_1.role'),
   },
   {
-    title: 'Accounts Receivable System',
-    desc: "Custom-built financial management tool for tracking invoices, payment schedules, and client account balances. Replaced a manual spreadsheet workflow and improved the team's financial visibility.",
+    title: () => t('projects.items.project_2.title'),
+    desc:  () => t('projects.items.project_2.desc'),
     tags: ['PHP', 'JavaScript', 'MySQL', 'CSS3'],
-    role: 'Primary developer — designed the DB schema, built all views and logic, delivered as part of my internship.',
+    role:  () => t('projects.items.project_2.role'),
   },
   {
-    title: 'Customer Self-Service Portal',
-    desc: 'A B2B-facing portal allowing clients to check their account status, access documents, and submit requests online. Focused heavily on UX clarity and mobile responsiveness.',
+    title: () => t('projects.items.project_3.title'),
+    desc:  () => t('projects.items.project_3.desc'),
     tags: ['PHP', 'JavaScript', 'MySQL', 'Responsive CSS'],
-    role: 'End-to-end development — frontend and backend implementation with a UX-first approach throughout.',
+    role:  () => t('projects.items.project_3.role'),
   },
   {
-    title: 'Legacy App Redesign & Responsiveness',
-    desc: 'Modernization of multiple existing production web applications — migrating desktop-only layouts to mobile-first designs, refactoring CSS architecture, and improving component structure.',
+    title: () => t('projects.items.project_4.title'),
+    desc:  () => t('projects.items.project_4.desc'),
     tags: ['Vue.js 3', 'React', 'CSS3', 'UI / UX'],
-    role: 'Led the frontend redesign — assessed existing UIs, proposed improvements, and executed across several live applications.',
+    role:  () => t('projects.items.project_4.role'),
   },
 ]
 </script>
