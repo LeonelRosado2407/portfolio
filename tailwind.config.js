@@ -7,23 +7,23 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        display: ['Syne', 'sans-serif'],
-        body: ['DM Sans', 'sans-serif'],
+        display: ['Georgia', 'Times New Roman', 'serif'],
+        body: ['Trebuchet MS', 'Arial', 'sans-serif'],
       },
       colors: {
         accent: {
-          DEFAULT: '#c8501a',
-          dark: '#a83d10',
-          light: '#f0e6df',
+          DEFAULT: '#D94F2B',
+          dark: '#A83D1F',
+          light: '#EDE8E0',
         },
         ink: {
-          DEFAULT: '#111010',
-          2: '#3a3836',
-          3: '#7a756f',
+          DEFAULT: '#1C1917',
+          2: '#3D2B1F',
+          3: '#8C7B6E',
         },
         paper: {
-          DEFAULT: '#f5f3ef',
-          2: '#eceae4',
+          DEFAULT: '#EDE8E0',
+          2: '#B07D62',
         },
       },
       letterSpacing: {

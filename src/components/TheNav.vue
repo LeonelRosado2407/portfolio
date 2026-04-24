@@ -20,12 +20,14 @@
 </template>
 
 <script setup>
+import { onMounted } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const { t, locale } = useI18n()
 
 const toggleLanguage = () => {
   locale.value = locale.value === 'en' ? 'es' : 'en'
+  localStorage.setItem('lang', locale.value)
 }
 
 
@@ -35,6 +37,11 @@ const links = [
   { href: '#services', label: () => t('nav.services') },
   { href: '#contact',  label: () => t('nav.contact')  },
 ]
-
-console.log(links[0].label()) // Test to ensure labels are functions and return correct values;
+onMounted(() => {
+  //get the localStorage language preference and set it on the i18n locale
+  const savedLang = localStorage.getItem('lang')
+  if (savedLang) {
+    locale.value = savedLang
+  }
+})
 </script>

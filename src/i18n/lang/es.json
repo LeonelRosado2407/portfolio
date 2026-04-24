@@ -15,5 +15,31 @@
     "projects_delivered": "Proyectos Entregados",
     "response_time": "Tiempo de Respuesta",
     "core_stack": "Pila Principal"
+  },
+  "about": {
+    "title": "Acerca de mí",
+    "title_2": "Experience",
+    "subtitle": "Building web experiences that actually work",
+    "subtitle_2": "Actually Work",
+    "bio_1": "I'm a software engineer specializing in frontend development, based in Mérida, México. My degree in Digital Business and Virtual Environments gives me a broader view of how technology drives real business outcomes — not just how to write code.",
+    "bio_2":"Over 2 years I've worked on custom web applications, ERPs, accounts-receivable systems, and client portals — always in professional, collaborative environments using agile methodologies.",
+    "bio_3":"I'm now taking on freelance projects through Upwork. I work autonomously, communicate proactively, and bring the same attention to detail from my professional work to every client engagement.",
+    "experiences": {
+      "experience_1": {
+        "period": "MAY 2023 - DEC 2023",
+        "position": "Web Developer Intern",
+        "description": "Built a custom Accounts Receivable system and a customer-facing client portal. First end-to-end experience in a production environment."
+      },
+      "experience_2": {
+        "period": "APR 2024 - OCT 2024",
+        "position": "Junior Web Developer",
+        "description": "Custom web application development. Contributed to building a full ERP system from scratch alongside a cross-functional team."
+      },
+      "experience_3": {
+        "period": "JAN 2025 - DEC 2025",
+        "position": "Software Engineer",
+        "description": "Redesign, development and responsiveness improvements on established web applications. UI/UX enhancement across multiple production products."
+      }
+    }
   }
 }

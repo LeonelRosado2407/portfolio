@@ -1,0 +1,13 @@
+<svg width="200" height="200" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <rect width="200" height="200" rx="32" fill="#D94F2B"/>
+  <g transform="translate(100, 100)">
+    <polygon points="0,-48 42,0 0,48 -42,0" fill="none" stroke="#EDE8E0" stroke-width="2"/>
+    <polygon points="0,-30 26,0 0,30 -26,0" fill="none" stroke="#EDE8E0" stroke-width="0.8" opacity="0.3"/>
+    <line x1="-42" y1="0" x2="42" y2="0" stroke="#EDE8E0" stroke-width="1.8"/>
+    <circle cx="0" cy="0" r="4" fill="#D94F2B" stroke="#EDE8E0" stroke-width="1.5"/>
+    <circle cx="0" cy="-48" r="3" fill="#EDE8E0"/>
+    <circle cx="0" cy="48" r="3" fill="#EDE8E0"/>
+    <text x="-16" y="7" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="20" font-weight="400" fill="#EDE8E0">L</text>
+    <text x="16" y="7" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="20" font-weight="700" fill="#1C1917">R</text>
+  </g>
+</svg>

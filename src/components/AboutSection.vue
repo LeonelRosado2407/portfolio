@@ -8,30 +8,24 @@
       </div>
       <h2 class="font-display font-extrabold tracking-tighter leading-tight mb-6"
           style="font-size: clamp(1.9rem, 3.5vw, 2.8rem)">
-        Building web experiences that
-        <em class="not-italic text-accent">actually work</em>
+        {{ t('about.subtitle') }}
+        <em class="not-italic text-accent">{{ t('about.subtitle_2') }}</em>
       </h2>
       <p class="text-ink-2 leading-relaxed text-sm mb-4">
-        I'm a software engineer specializing in frontend development, based in Mérida, México.
-        My degree in Digital Business and Virtual Environments gives me a broader view of how
-        technology drives real business outcomes — not just how to write code.
+        {{ t('about.bio_1') }}
       </p>
       <p class="text-ink-2 leading-relaxed text-sm mb-4">
-        Over 2 years I've worked on custom web applications, ERPs, accounts-receivable systems,
-        and client portals — always in professional, collaborative environments using agile
-        methodologies.
+        {{ t('about.bio_2') }}
       </p>
       <p class="text-ink-2 leading-relaxed text-sm">
-        I'm now taking on freelance projects through Upwork. I work autonomously, communicate
-        proactively, and bring the same attention to detail from my professional work to every
-        client engagement.
+        {{ t('about.bio_3') }}
       </p>
     </div>
 
     <!-- Timeline -->
     <div>
       <div class="section-label">
-        <span class="font-display font-bold text-xs uppercase tracking-widest2 text-accent">Experience</span>
+        <span class="font-display font-bold text-xs uppercase tracking-widest2 text-accent">{{t('about.title_2')}}</span>
       </div>
       <div class="border-l border-ink/10 pl-6 flex flex-col gap-0">
         <div v-for="(item, i) in experience" :key="i"

@@ -23,7 +23,7 @@
         <a href="#projects"
            class="inline-flex items-center gap-2 bg-accent text-white text-sm font-medium
                   px-7 py-3 hover:bg-accent-dark transition-colors duration-200">
-          {{ t('hero.btn_wacth_my_work') }}
+          {{ t('hero.btn_wacth_my_work') }} →
         </a>
         <a href="#contact"
            class="inline-flex items-center gap-2 border border-ink/15 text-ink text-sm font-medium
