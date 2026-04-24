@@ -13,8 +13,9 @@
         </a>
       </li>
     </ul>
-    <button @click="toggleLanguage" class="text-xs uppercase tracking-widest">
-      {{ locale === 'en' ? 'ES' : 'EN' }}
+    <button @click="toggleLanguage" class="text-xs uppercase tracking-widest hover:text-accent flex items-center gap-1 border border-ink/15 text-ink font-medium px-3 py-1 hover:border-accent transition-colors duration-200 rounded-lg">
+        <span class="material-symbols-outlined">g_translate</span>
+        {{ locale === 'en' ? 'ES' : 'EN' }}
     </button>
   </nav>
 </template>
