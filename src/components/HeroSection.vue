@@ -44,7 +44,7 @@
                'border-b': i < 2,
              }">
           <div class="font-display font-extrabold text-5xl tracking-tighter text-accent leading-none mb-1">
-            {{ stat.value }}
+            {{ formatStatValue(stat, i) }}
           </div>
           <div class="text-xs uppercase tracking-wide text-ink-3">{{ stat.label() }}</div>
         </div>
@@ -71,23 +71,53 @@
 </template>
 
 <script setup>
+import { onMounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
 
 const { t } = useI18n()
 
-
 const stats = [
-  { value: '2+',   label: () => t('hero.experience')  },
-  { value: '3',    label: () => t('hero.professional_role')    },
-  { value: '5+',   label: () => t('hero.projects_delivered')    },
-  { value: '24h',  label: () => t('hero.response_time')         },
+  { target: 3, suffix: '+', label: () => t('hero.experience') },
+  { target: 3, suffix: '', label: () => t('hero.professional_role') },
+  { target: 5, suffix: '+', label: () => t('hero.projects_delivered') },
+  { target: 24, suffix: 'h', label: () => t('hero.response_time') },
 ]
 
+const animatedValues = ref(stats.map(() => 0))
+
+const formatStatValue = (stat, index) => {
+  const value = animatedValues.value[index] ?? 0
+  return `${Math.round(value)}${stat.suffix ?? ''}`
+}
+
+const animateStatValue = (index, target, duration = 1400) => {
+  const startTime = performance.now()
+
+  const step = (currentTime) => {
+    const progress = Math.min((currentTime - startTime) / duration, 1)
+    const eased = 1 - Math.pow(1 - progress, 3)
+
+    animatedValues.value[index] = target * eased
+
+    if (progress < 1) {
+      requestAnimationFrame(step)
+    }
+  }
+
+  requestAnimationFrame(step)
+}
+
+onMounted(() => {
+  stats.forEach((stat, index) => {
+    setTimeout(() => animateStatValue(index, stat.target), index * 140)
+  })
+})
+
 const stack = [
-  { name: 'React',          accent: true  },
-  { name: 'Vue.js 3',       accent: true  },
   { name: 'JavaScript',     accent: true  },
-  { name: 'PHP / Laravel',  accent: false },
+  { name: 'Vue.js 3',       accent: true  },
+  { name: 'PHP / Laravel',  accent: true  },
+  { name: 'React',          accent: false },
   { name: 'HTML5 / CSS3',   accent: false },
   { name: 'MySQL',          accent: false },
   { name: 'Git / GitHub',   accent: false },

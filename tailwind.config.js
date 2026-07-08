@@ -7,8 +7,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        display: ['Georgia', 'Times New Roman', 'serif'],
-        body: ['Trebuchet MS', 'Arial', 'sans-serif'],
+        display: ['"Mozilla Text"', 'sans-serif'],
+        body: ['"Mozilla Text"', 'sans-serif'],
       },
       colors: {
         accent: {

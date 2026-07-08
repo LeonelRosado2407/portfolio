@@ -34,6 +34,21 @@
   to   { opacity: 1; transform: translateY(0); }
 }
 
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(16px) scale(0.98);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(-3px) scale(1.01);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
 @keyframes barGrow {
   from { transform: scaleX(0); }
   to   { transform: scaleX(1); }
@@ -41,6 +56,11 @@
 
 .animate-fade-up {
   animation: fadeUp 0.7s ease both;
+}
+
+.animate-fade-down {
+  animation: fadeDown 0.8s cubic-bezier(0.22, 1, 0.36, 1) both;
+  will-change: opacity, transform;
 }
 
 .animate-bar {
@@ -51,3 +71,5 @@
 .delay-100 { animation-delay: 0.1s; }
 .delay-220 { animation-delay: 0.22s; }
 .delay-350 { animation-delay: 0.35s; }
+.delay-480 { animation-delay: 0.48s; }
+.delay-610 { animation-delay: 0.61s; }
