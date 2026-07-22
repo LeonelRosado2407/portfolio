@@ -1,4 +1,5 @@
 <template>
+  <Analytics />
   <div>
     <TheNav />
     <main>
@@ -20,4 +21,5 @@ import ProjectsSection from './components/ProjectsSection.vue'
 import ServicesSection from './components/ServicesSection.vue'
 import ContactSection  from './components/ContactSection.vue'
 import TheFooter     from './components/TheFooter.vue'
+import { Analytics } from '@vercel/analytics/vue'
 </script>
