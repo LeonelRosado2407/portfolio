@@ -3,15 +3,25 @@
     "about": "About",
     "projects": "Projects",
     "services": "Services",
-    "contact": "Contact"
+    "contact": "Contact",
+    "theme_to_dark": "Switch to dark theme",
+    "theme_to_light": "Switch to light theme",
+    "lang_toggle": "Cambiar idioma a español",
+    "menu_open": "Open menu",
+    "menu_close": "Close menu",
+    "skills": "Skills"
   },
   "hero": {
     "open_to_projects": "OPEN TO FREELANCE PROJECTS",
-    "description": "I'm Leonel Rosado — a frontend-focused developer from Mérida, México with 2 years of professional experience building web apps, ERPs, and client portals. I work with React, Vue.js 3, and PHP/Laravel to deliver clean, fast, and usable interfaces.",
-    "btn_wacth_my_work": "Watch my work",
+    "title_1": "Full-Stack",
+    "title_2": "Developer",
+    "title_3": "focused on interfaces",
+    "description": "I'm Leonel Rosado, a full-stack developer from Mérida, México with 3+ years of professional experience building business systems, payment flows and web platforms. I work with PHP/Laravel and Node/Express on the backend and Vue 3 and React on the frontend, where I care most about clean, fast and accessible interfaces.",
+    "btn_wacth_my_work": "See my work",
     "btn_get_in_touch": "Get in touch",
+    "btn_cv": "Download CV",
     "experience": "Years of Experience",
-    "professional_role": "Professional Role",
+    "professional_role": "Professional Roles",
     "projects_delivered": "Projects Delivered",
     "response_time": "Response Time",
     "core_stack": "Core Stack"
@@ -19,53 +29,107 @@
   "about": {
     "title": "About me",
     "title_2": "Experience",
-    "subtitle": "Building web experiences that actually work",
-    "subtitle_2": "Actually Work",
-    "bio_1": "I'm a software engineer specializing in frontend development, based in Mérida, México. My degree in Digital Business and Virtual Environments gives me a broader view of how technology drives real business outcomes — not just how to write code.",
-    "bio_2":"Over 2 years I've worked on custom web applications, ERPs, accounts-receivable systems, and client portals — always in professional, collaborative environments using agile methodologies.",
-    "bio_3":"I'm now taking on freelance projects through Upwork. I work autonomously, communicate proactively, and bring the same attention to detail from my professional work to every client engagement.",
+    "subtitle": "Building web experiences that",
+    "subtitle_2": "actually work",
+    "bio_1": "I'm a full-stack software engineer based in Mérida, México, with a strong focus on the frontend. My degree in Virtual Environments and Digital Business (2025) gives me a broader view of how technology drives real business outcomes, not just how to write code.",
+    "bio_2": "For 3+ years I've built ERPs, accounts-receivable systems, client portals, embedded e-commerce widgets and card payment flows, always in collaborative teams working with Scrum.",
+    "bio_3": "I also take on freelance projects. I work autonomously, communicate proactively, and bring the same attention to detail from my professional work to every client engagement.",
     "experiences": {
       "experience_1": {
         "period": "MAY 2023 - DEC 2023",
         "position": "Web Developer Intern",
-        "description": "Built a custom Accounts Receivable system and a customer-facing client portal. First end-to-end experience in a production environment."
+        "company": "Netlancers",
+        "description": "Built the complete Expenses module of an ERP and contributed to the custom Accounts Receivable system and its customer portal."
       },
       "experience_2": {
         "period": "APR 2024 - OCT 2024",
         "position": "Junior Web Developer",
-        "description": "Custom web application development. Contributed to building a full ERP system from scratch alongside a cross-functional team."
+        "company": "Netlancers",
+        "description": "Worked on an Accounts Receivable system for a real estate company's contracts and payments, and built its customer portal with PayPal payments."
       },
       "experience_3": {
         "period": "JAN 2025 - DEC 2025",
         "position": "Software Engineer",
-        "description": "Redesign, development and responsiveness improvements on established web applications. UI/UX enhancement across multiple production products."
+        "company": "Intersoft",
+        "description": "Led the full redesign of “Ecom”, a widget embedded via iframe in external web apps, and redesigned “Tire Access”, an embedded e-commerce, improving responsiveness, UI and UX."
+      },
+      "experience_4": {
+        "period": "JAN 2026 - PRESENT",
+        "position": "Software Engineer",
+        "company": "Tire Base",
+        "description": "Built Recurrent Payment, a complete credit and debit card payment gateway, plus Surcharge and Dual Pricing for the POS system. Ongoing support and improvements to the card payments module."
       }
+    }
+  },
+  "skills": {
+    "label": "SKILLS",
+    "title": "Tools I work with",
+    "groups": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "testing": "Testing & quality",
+      "tools": "Tools & workflow"
     }
   },
   "projects": {
     "label": "FEATURED WORK",
     "title": "Projects I've built",
+    "personal_label": "Personal projects",
+    "client_label": "Professional experience",
+    "private_note": "Client project · private code",
     "my_role": "My role:",
+    "featured": {
+      "personal_tag": "Personal project",
+      "btn_demo": "View demo",
+      "btn_code": "Code",
+      "thumb_label": "Show image {n}",
+      "dulce": {
+        "desc": "Website and online menu for a (fictional) Mexican café and bakery: browse 33 products, search, save favorites and see whether it's open right now, all from your phone.",
+        "h1": "Accent-insensitive search with filters stored in the URL (shareable and back-button friendly)",
+        "h2": "Persistent favorites with Pinia + localStorage and a dedicated filter",
+        "h3": "Accessible lightbox, keyboard navigation and prefers-reduced-motion support",
+        "h4": "Unit tests (Vitest) and end-to-end tests (Playwright) running in GitHub Actions CI",
+        "alt_home": "Dulce Tentación home page",
+        "alt_menu": "Online menu grouped by category",
+        "alt_search": "Menu search on a phone",
+        "alt_lightbox": "Product photo lightbox on a phone"
+      },
+      "nexus": {
+        "desc": "Marketing landing page for a fictional SaaS product, built to be fast and accessible by default: static HTML, a few tiny scripts and nothing else.",
+        "h1": "Lighthouse 100 in all four categories, with budgets enforced in CI",
+        "h2": "WCAG 2.1 AA audited automatically with axe-core",
+        "h3": "Progressive enhancement: everything is visible and usable without JavaScript",
+        "h4": "Native dialog demo form with validation and loading, success and error states, plus an accessible billing toggle",
+        "alt_hero": "Nexus landing page hero",
+        "alt_pricing": "Pricing table with annual billing selected",
+        "alt_dialog": "Demo request dialog",
+        "alt_mobile": "Nexus on a phone"
+      }
+    },
     "items": {
       "project_1": {
-        "title": "Custom ERP System",
-        "desc": "Full enterprise resource planning application covering inventory, purchasing, and reporting modules. Developed in a team environment with agile sprints and a version-controlled codebase.",
-        "role": "Frontend module development — implemented inventory and reporting UIs and integrated them with the backend API."
+        "title": "Recurring Payments & POS Pricing",
+        "kind": "Payments",
+        "desc": "A complete payment gateway for recurring credit and debit card charges, plus Surcharge and Dual Pricing options in the point-of-sale system to expand in-terminal payment choices.",
+        "role": "Implemented the Recurrent Payment gateway and the Surcharge / Dual Pricing features; ongoing support of the card payments module."
       },
       "project_2": {
-        "title": "Accounts Receivable System",
-        "desc": "Custom-built financial management tool for tracking invoices, payment schedules, and client account balances. Replaced a manual spreadsheet workflow and improved the team's financial visibility.",
-        "role": "Primary developer — designed the DB schema, built all views and logic, delivered as part of my internship."
+        "title": "Embedded E-commerce Redesign (Ecom & Tire Access)",
+        "kind": "Redesign",
+        "desc": "Full redesign of two products embedded via iframe in external web applications: the “Ecom” widget and the “Tire Access” e-commerce, focused on responsiveness, UI and UX.",
+        "role": "Led the Ecom redesign and redesigned Tire Access end to end on the frontend."
       },
       "project_3": {
-        "title": "Customer Self-Service Portal",
-        "desc": "A B2B-facing portal allowing clients to check their account status, access documents, and submit requests online. Focused heavily on UX clarity and mobile responsiveness.",
-        "role": "End-to-end development — frontend and backend implementation with a UX-first approach throughout."
+        "title": "Accounts Receivable & Customer Portal",
+        "kind": "Finance · Portal",
+        "desc": "Accounts Receivable system to manage a real estate company's contracts and payments, extended with a customer portal where clients check their account and pay online through PayPal.",
+        "role": "Contributed to the AR system and built the customer portal, including the PayPal payment integration."
       },
       "project_4": {
-        "title": "Legacy App Redesign & Responsiveness",
-        "desc": "Modernization of multiple existing production web applications — migrating desktop-only layouts to mobile-first designs, refactoring CSS architecture, and improving component structure.",
-        "role": "Led the frontend redesign — assessed existing UIs, proposed improvements, and executed across several live applications."
+        "title": "ERP Expenses Module",
+        "kind": "ERP",
+        "desc": "Complete Expenses module for a custom ERP, adding new operational features to record and control company spending inside the existing system.",
+        "role": "Built the module end to end during my internship, from the views to the business logic."
       }
     }
   },
@@ -86,8 +150,8 @@
         "desc": "Business tools, dashboards, and portals built from scratch. I have direct professional experience with these systems and can deliver them reliably."
       },
       "service_4": {
-        "title": "PHP / Laravel backends",
-        "desc": "Full-stack when you need it. I can build and connect Laravel APIs, MySQL databases, and auth systems to power your frontend application."
+        "title": "PHP / Laravel & Node.js backends",
+        "desc": "Full-stack when you need it. I build and connect Laravel or Express APIs, MySQL databases, authentication and payment integrations (cards, PayPal) to power your frontend."
       }
     }
   },
@@ -96,15 +160,31 @@
     "title": "Let's build something together",
     "description": "I'm currently available for freelance projects — short or long term. Whether you have a detailed brief or just an early idea, reach out and I'll respond within 24 hours.",
     "btn_email": "Send me an email →",
+    "btn_cv": "Download CV ↓",
     "items": {
       "email": "Email",
       "phone": "Phone / WhatsApp",
       "location": "Location",
       "github": "GitHub",
-      "linkedin": "LinkedIn"
+      "linkedin": "LinkedIn",
+      "location_value": "Mérida, Yucatán · Remote worldwide"
+    },
+    "form": {
+      "title": "Or send me a message",
+      "name": "Name",
+      "email": "Email",
+      "message": "Message",
+      "placeholder_name": "Your name",
+      "placeholder_email": "name{'@'}company.com",
+      "placeholder_message": "Tell me about your project…",
+      "submit": "Send message",
+      "sending": "Sending…",
+      "success": "Thanks! Your message was sent. I'll reply within 24 hours.",
+      "error": "Something went wrong and your message wasn't sent. Please try again or email me directly.",
+      "subject": "New message from leonelrosado.dev"
     }
   },
   "footer": {
-    "copyright": "© 2025 Leonel Rosado · Frontend Developer · Mérida, México"
+    "copyright": "© {year} Leonel Rosado · Full-Stack Developer · Mérida, México"
   }
 }
