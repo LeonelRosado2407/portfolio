@@ -2,26 +2,28 @@
   <section id="home" class="min-h-screen grid md:grid-cols-2 pt-20">
 
     <!-- Left -->
-    <div class="flex flex-col justify-center px-16 py-20 border-b md:border-b-0 md:border-r border-ink/10">
+    <div class="flex flex-col justify-center px-6 md:px-12 lg:px-16 py-16 md:py-20 border-b md:border-b-0 md:border-r border-ink/10">
       <span class="animate-fade-up inline-block text-xs font-medium uppercase tracking-widest
                    text-accent border border-accent px-3 py-1 w-fit mb-8">
-        Open to freelance projects
+        {{ t('hero.open_to_projects') }}
       </span>
 
       <h1 class="animate-fade-up delay-100 font-display font-extrabold leading-none tracking-tighter mb-6"
-          style="font-size: clamp(2.8rem, 5vw, 4.5rem)">
-        Frontend<br />
-        <em class="not-italic text-accent font-semibold">Developer</em><br />
-        &amp; UI Builder
+          style="font-size: clamp(2.4rem, 5vw, 4.5rem)">
+        {{ t('hero.title_1') }}<br />
+        <em class="not-italic text-accent font-semibold">{{ t('hero.title_2') }}</em>
+        <span class="block mt-3 font-semibold tracking-tight text-ink-2" style="font-size: 0.42em">
+          {{ t('hero.title_3') }}
+        </span>
       </h1>
 
       <p class="animate-fade-up delay-220 text-ink-2 leading-relaxed max-w-md mb-10">
        {{t('hero.description')}}
       </p>
 
-      <div class="animate-fade-up delay-350 flex flex-wrap gap-4">
+      <div class="animate-fade-up delay-350 flex flex-wrap gap-3 sm:gap-4">
         <a href="#projects"
-           class="inline-flex items-center gap-2 bg-accent text-white text-sm font-medium
+           class="inline-flex items-center gap-2 bg-accent-fill text-white text-sm font-medium
                   px-7 py-3 hover:bg-accent-dark transition-colors duration-200">
           {{ t('hero.btn_wacth_my_work') }} →
         </a>
@@ -30,20 +32,26 @@
                   px-7 py-3 hover:border-ink-2 transition-colors duration-200">
           {{ t('hero.btn_get_in_touch') }}
         </a>
+        <a :href="cvHref" download data-testid="cv-hero"
+           class="inline-flex items-center gap-2 text-ink text-sm font-medium px-2 py-3
+                  underline underline-offset-4 decoration-ink/30 hover:decoration-accent hover:text-accent
+                  transition-colors duration-200">
+          {{ t('hero.btn_cv') }} ↓
+        </a>
       </div>
     </div>
 
     <!-- Right -->
-    <div class="flex flex-col justify-center px-12 py-20 bg-paper-2">
+    <div class="flex flex-col justify-center px-6 md:px-12 py-16 md:py-20 bg-paper-2">
       <!-- Stats grid -->
       <div class="grid grid-cols-2 border border-ink/10">
         <div v-for="(stat, i) in stats" :key="i"
-             class="p-7 border-ink/10"
+             class="p-5 sm:p-7 border-ink/10"
              :class="{
                'border-r': i % 2 === 0,
                'border-b': i < 2,
              }">
-          <div class="font-display font-extrabold text-5xl tracking-tighter text-accent leading-none mb-1">
+          <div class="font-display font-extrabold text-4xl sm:text-5xl tracking-tighter text-accent leading-none mb-1">
             {{ formatStatValue(stat, i) }}
           </div>
           <div class="text-xs uppercase tracking-wide text-ink-3">{{ stat.label() }}</div>
@@ -73,13 +81,15 @@
 <script setup>
 import { onMounted, ref } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useCvLink } from '../composables/useCvLink'
 
 const { t } = useI18n()
+const cvHref = useCvLink()
 
 const stats = [
   { target: 3, suffix: '+', label: () => t('hero.experience') },
-  { target: 3, suffix: '', label: () => t('hero.professional_role') },
-  { target: 5, suffix: '+', label: () => t('hero.projects_delivered') },
+  { target: 4, suffix: '', label: () => t('hero.professional_role') },
+  { target: 6, suffix: '+', label: () => t('hero.projects_delivered') },
   { target: 24, suffix: 'h', label: () => t('hero.response_time') },
 ]
 
@@ -108,19 +118,23 @@ const animateStatValue = (index, target, duration = 1400) => {
 }
 
 onMounted(() => {
+  if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    animatedValues.value = stats.map((stat) => stat.target)
+    return
+  }
   stats.forEach((stat, index) => {
     setTimeout(() => animateStatValue(index, stat.target), index * 140)
   })
 })
 
 const stack = [
-  { name: 'JavaScript',     accent: true  },
-  { name: 'Vue.js 3',       accent: true  },
-  { name: 'PHP / Laravel',  accent: true  },
-  { name: 'React',          accent: false },
-  { name: 'HTML5 / CSS3',   accent: false },
-  { name: 'MySQL',          accent: false },
-  { name: 'Git / GitHub',   accent: false },
-  { name: 'SCRUM',          accent: false },
+  { name: 'Vue.js 3',          accent: true  },
+  { name: 'TypeScript',        accent: true  },
+  { name: 'PHP / Laravel',     accent: true  },
+  { name: 'Node.js / Express', accent: true  },
+  { name: 'React',             accent: false },
+  { name: 'Tailwind CSS',      accent: false },
+  { name: 'MySQL',             accent: false },
+  { name: 'Git / GitHub',      accent: false },
 ]
 </script>

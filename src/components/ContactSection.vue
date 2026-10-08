@@ -1,7 +1,7 @@
 <template>
-  <section id="contact" class="border-t border-ink/10 bg-paper-2 grid md:grid-cols-2 gap-24 items-center px-16 py-24">
+  <section id="contact" class="border-t border-ink/10 bg-paper-2 grid lg:grid-cols-2 gap-12 lg:gap-20 items-start px-6 md:px-12 lg:px-16 py-20 md:py-24">
 
-    <!-- Left -->
+    <!-- Left: pitch, actions, contact rows -->
     <div>
       <div class="section-label">
         <span class="font-display font-bold text-xs uppercase tracking-widest2 text-accent">{{ t('contact.label') }}</span>
@@ -13,28 +13,39 @@
       <p class="text-ink-2 leading-relaxed text-sm mb-8">
         {{ t('contact.description') }}
       </p>
-      <a href="mailto:leonelrosado2407@gmail.com"
-         class="inline-flex items-center gap-2 bg-accent text-white text-sm font-medium
-                px-7 py-3 hover:bg-accent-dark transition-colors duration-200">
-        {{ t('contact.btn_email') }}
-      </a>
-    </div>
+      <div class="flex flex-wrap gap-3 mb-10">
+        <a href="mailto:leonelrosado2407@gmail.com"
+           class="inline-flex items-center gap-2 bg-accent-fill text-white text-sm font-medium
+                  px-7 py-3 hover:bg-accent-dark transition-colors duration-200">
+          {{ t('contact.btn_email') }}
+        </a>
+        <a :href="cvHref" download data-testid="cv-contact"
+           class="inline-flex items-center gap-2 border border-ink/15 text-ink text-sm font-medium
+                  px-7 py-3 hover:border-ink-2 transition-colors duration-200">
+          {{ t('contact.btn_cv') }}
+        </a>
+      </div>
 
-    <!-- Right: contact rows -->
-    <div class="flex flex-col gap-5">
-      <div v-for="item in contactItems" :key="item.label" class="flex items-center gap-4">
-        <div class="w-10 h-10 bg-paper border border-ink/10 flex items-center justify-center flex-shrink-0">
-          <component :is="item.icon" class="w-3.5 h-3.5 text-accent" />
-        </div>
-        <div>
-          <div class="text-xs uppercase tracking-wider text-ink-3 mb-0.5">{{ item.label() }}</div>
-          <div class="text-sm font-medium text-ink">
-            <a v-if="item.href" :href="item.href" target="_blank"
-               class="hover:text-accent transition-colors">{{ item.value }}</a>
-            <span v-else>{{ item.value }}</span>
+      <div class="flex flex-col gap-5">
+        <div v-for="item in contactItems" :key="item.href ?? item.label()" class="flex items-center gap-4">
+          <div class="w-10 h-10 bg-paper border border-ink/10 flex items-center justify-center flex-shrink-0">
+            <component :is="item.icon" class="w-3.5 h-3.5 text-accent" />
+          </div>
+          <div class="min-w-0">
+            <div class="text-xs uppercase tracking-wider text-ink-3 mb-0.5">{{ item.label() }}</div>
+            <div class="text-sm font-medium text-ink break-words">
+              <a v-if="item.href" :href="item.href" target="_blank" rel="noopener"
+                 class="hover:text-accent transition-colors">{{ display(item.value) }}</a>
+              <span v-else>{{ display(item.value) }}</span>
+            </div>
           </div>
         </div>
       </div>
+    </div>
+
+    <!-- Right: form -->
+    <div class="bg-paper border border-ink/10 p-6 md:p-8">
+      <ContactForm />
     </div>
 
   </section>
@@ -43,8 +54,13 @@
 <script setup>
 import { h } from 'vue'
 import { useI18n } from 'vue-i18n'
+import { useCvLink } from '../composables/useCvLink'
+import ContactForm from './ContactForm.vue'
 
 const { t } = useI18n()
+const cvHref = useCvLink()
+// Most contact values are proper nouns; translatable ones are functions
+const display = (value) => (typeof value === 'function' ? value() : value)
 
 const IconMail = () => h('svg', { viewBox: '0 0 24 24', fill: 'none', stroke: 'currentColor', 'stroke-width': '2' }, [
   h('path', { d: 'M20 4H4a2 2 0 00-2 2v12a2 2 0 002 2h16a2 2 0 002-2V6a2 2 0 00-2-2z' }),
@@ -68,7 +84,7 @@ const IconLinkedIn = () => h('svg', { viewBox: '0 0 24 24', fill: 'none', stroke
 const contactItems = [
   { label: () => t('contact.items.email'),    icon: IconMail,     value: 'leonelrosado2407@gmail.com',          href: 'mailto:leonelrosado2407@gmail.com' },
   { label: () => t('contact.items.phone'),    icon: IconPhone,    value: '+52 999 342 7756',                    href: null },
-  { label: () => t('contact.items.location'), icon: IconLocation, value: 'Mérida, Yucatán · Remote worldwide', href: null },
+  { label: () => t('contact.items.location'), icon: IconLocation, value: () => t('contact.items.location_value'), href: null },
   { label: () => t('contact.items.github'),   icon: IconGithub,   value: 'LeonelRosado2407',                   href: 'https://github.com/LeonelRosado2407' },
   { label: () => t('contact.items.linkedin'), icon: IconLinkedIn, value: 'Noé Leonel Rosado Quintal',          href: 'https://www.linkedin.com/in/no%C3%A9-leonel-rosado-quintal-20a701263' },
 ]

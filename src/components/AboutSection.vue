@@ -1,5 +1,5 @@
 <template>
-  <section id="about" class="border-t border-ink/10 grid md:grid-cols-2 gap-16 px-16 py-24" ref="sectionRef">
+  <section id="about" class="border-t border-ink/10 grid md:grid-cols-2 gap-12 md:gap-16 px-6 md:px-12 lg:px-16 py-20 md:py-24" ref="sectionRef">
 
     <!-- Bio -->
     <div>
@@ -29,6 +29,7 @@
       </div>
       <div  class="border-l border-ink/10 pl-6 flex flex-col gap-0">
         <div v-for="(item, i) in experience" :key="i"
+             data-testid="timeline-item"
              class="relative timeline-dot"
              :class="{ 'pb-8': i < experience.length - 1, 'animate-fade-down': isVisible, 'opacity-0': !isVisible }"
              :style="{ animationDelay: `${i * 0.2}s` }">
@@ -36,7 +37,7 @@
             {{ item.period() }}
           </div>
           <div class="font-display font-bold text-sm text-ink mb-1.5">
-            {{ item.role() }}
+            {{ item.role() }} <span class="text-ink-3 font-medium">· {{ item.company }}</span>
           </div>
           <div class="text-xs text-ink-3 leading-relaxed">
             {{ item.desc() }}
@@ -72,21 +73,10 @@ onMounted(() => {
   }
 })
 
-const experience = [
-  {
-    period: () => t('about.experiences.experience_3.period'),
-    role: () => t('about.experiences.experience_3.position'),
-    desc: () => t('about.experiences.experience_3.description'),
-  },
-  {
-    period: () => t('about.experiences.experience_2.period'),
-    role: () => t('about.experiences.experience_2.position'),
-    desc: () => t('about.experiences.experience_2.description'),
-  },
-  {
-    period: () => t('about.experiences.experience_1.period'),
-    role: () => t('about.experiences.experience_1.position'),
-    desc: () => t('about.experiences.experience_1.description'),
-  },
-]
+const experience = [4, 3, 2, 1].map((n) => ({
+  period:  () => t(`about.experiences.experience_${n}.period`),
+  role:    () => t(`about.experiences.experience_${n}.position`),
+  company: t(`about.experiences.experience_${n}.company`),
+  desc:    () => t(`about.experiences.experience_${n}.description`),
+}))
 </script>

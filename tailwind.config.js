@@ -1,5 +1,8 @@
 /** @type {import('tailwindcss').Config} */
+const withAlpha = (name) => `rgb(var(--${name}) / <alpha-value>)`
+
 export default {
+  darkMode: 'class',
   content: [
     './index.html',
     './src/**/*.{vue,js,ts}',
@@ -12,19 +15,28 @@ export default {
       },
       colors: {
         accent: {
-          DEFAULT: '#D94F2B',
-          dark: '#A83D1F',
-          light: '#EDE8E0',
+          DEFAULT: withAlpha('accent'),
+          dark: withAlpha('accent-dark'),
+          light: withAlpha('accent-light'),
+          // Button fill: darker than text accent in dark mode so white labels pass AA
+          fill: withAlpha('accent-fill'),
         },
         ink: {
-          DEFAULT: '#1C1917',
-          2: '#3D2B1F',
-          3: '#8C7B6E',
+          DEFAULT: withAlpha('ink'),
+          2: withAlpha('ink-2'),
+          3: withAlpha('ink-3'),
         },
         paper: {
-          DEFAULT: '#f5f3ef',
-          2: '#eceae4',
+          DEFAULT: withAlpha('paper'),
+          2: withAlpha('paper-2'),
         },
+        // Projects section + footer: stay dark in both themes
+        surface: {
+          DEFAULT: withAlpha('surface'),
+          2: withAlpha('surface-2'),
+          3: withAlpha('surface-3'),
+        },
+        'on-surface': withAlpha('on-surface'),
       },
       letterSpacing: {
         widest2: '0.12em',

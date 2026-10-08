@@ -1,58 +1,72 @@
-# 🧑‍💻 Leonel Rosado — Frontend Developer Portfolio
+# Leonel Rosado — Portfolio
 
-Personal portfolio built with **Vue 3**, **Vite**, and **Tailwind CSS**. This project serves as a professional presentation of my work, skills, and experience as a frontend developer — designed to share with potential clients and employers.
+Personal portfolio of **Leonel Rosado**, full-stack developer focused on interfaces. Built with **Vue 3**, **Vite** and **Tailwind CSS**, bilingual (EN/ES) with light and dark themes.
 
----
+**Live:** [leonelrosado.dev](https://leonelrosado.dev)
 
-## 🚀 Tech Stack
+## Features
 
-- [Vue 3](https://vuejs.org/) — Composition API with `<script setup>`
-- [Vite](https://vitejs.dev/) — Fast dev server and build tool
-- [Tailwind CSS](https://tailwindcss.com/) — Utility-first styling
-- [Google Fonts](https://fonts.google.com/) — Syne + DM Sans
+- Featured personal projects with screenshot galleries, live demos and source links ([Dulce Tentación](https://sweet-tentacion.vercel.app), [Nexus](https://nexus-landing-page-delta.vercel.app))
+- Professional experience and client work synced with my CV
+- English / Spanish (`vue-i18n`), remembered per visitor
+- Light / dark theme that follows the OS until the visitor picks one, with no flash on load
+- Downloadable CV in the active language
+- Contact form powered by [Web3Forms](https://web3forms.com) (no backend)
+- Responsive from 375px, mobile menu, `prefers-reduced-motion` support, Open Graph meta
 
----
+## Tech Stack
 
-## 📁 Project Structure
+- [Vue 3](https://vuejs.org/) with `<script setup>` (JavaScript)
+- [Vite 5](https://vitejs.dev/)
+- [Tailwind CSS 3](https://tailwindcss.com/) with design tokens as CSS variables
+- [vue-i18n](https://vue-i18n.intlify.dev/)
+- Font: Mozilla Text (Google Fonts) · Icons: Material Symbols
+- Deployed on Vercel with `@vercel/analytics`
+
+## Project Structure
 
 ```
 src/
 ├── components/
-│   ├── TheNav.vue            # Fixed navigation bar
-│   ├── HeroSection.vue       # Hero with stats and tech stack
-│   ├── AboutSection.vue      # Bio and experience timeline
-│   ├── ProjectsSection.vue   # Featured projects grid
-│   ├── ServicesSection.vue   # Services offered
-│   ├── ContactSection.vue    # Contact information
-│   └── TheFooter.vue         # Footer
-├── App.vue
-├── main.js
-└── style.css
+│   ├── TheNav.vue          # Fixed nav, mobile menu, language + theme toggles
+│   ├── HeroSection.vue     # Title, stats, core stack, CTAs
+│   ├── AboutSection.vue    # Bio and experience timeline
+│   ├── SkillsSection.vue   # Skills grouped by area
+│   ├── ProjectsSection.vue # Featured personal projects + client work
+│   ├── FeaturedProject.vue # Reusable featured project card with gallery
+│   ├── ServicesSection.vue # Services offered
+│   ├── ContactSection.vue  # Contact info, CV, form
+│   ├── ContactForm.vue     # Web3Forms contact form
+│   └── TheFooter.vue
+├── composables/
+│   ├── useTheme.js         # Light/dark theme state
+│   └── useCvLink.js        # CV URL for the active locale
+├── i18n/                   # vue-i18n setup + en.json / es.json
+└── assets/                 # CSS, logos, project screenshots
+public/
+├── cv/                     # Downloadable CVs (EN/ES)
+└── og.jpg                  # Social sharing image
 ```
 
----
-
-## 🛠️ Setup
+## Setup
 
 ```bash
-# Install dependencies
 npm install
-
-# Start development server
+cp .env.example .env   # add your Web3Forms access key
 npm run dev
-
-# Build for production
 npm run build
-
-# Preview production build
 npm run preview
 ```
 
----
+| Variable             | Purpose                                                          |
+| -------------------- | ---------------------------------------------------------------- |
+| `VITE_WEB3FORMS_KEY` | Web3Forms access key for the contact form. Set it in Vercel too. |
 
-## 📬 Contact
+Without the key the site works, but the contact form shows an error on submit.
+
+## Contact
 
 - **Email:** leonelrosado2407@gmail.com
 - **GitHub:** [LeonelRosado2407](https://github.com/LeonelRosado2407)
-- **LinkedIn:** [Noé Leonel Rosado Quintal](https://linkedin.com/in/noe-leonel-rosado-quintal)
+- **LinkedIn:** [Noé Leonel Rosado Quintal](https://www.linkedin.com/in/no%C3%A9-leonel-rosado-quintal-20a701263)
 - **Location:** Mérida, Yucatán · Available for remote work worldwide

@@ -1,5 +1,5 @@
 <template>
-  <section id="services" class="border-t border-ink/10 px-16 py-24" ref="sectionRef">
+  <section id="services" class="border-t border-ink/10 px-6 md:px-12 lg:px-16 py-20 md:py-24" ref="sectionRef">
     <div class="section-label" :class="{ 'animate-fade-up delay-100': isVisible }">
       <span class="font-display font-bold text-xs uppercase tracking-widest2 text-accent">{{ t('services.label') }}</span>
     </div>
@@ -9,14 +9,10 @@
       {{ t('services.title') }}
     </h2>
 
-    <div class="grid md:grid-cols-4 border border-ink/10">
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-ink/10 border border-ink/10">
       <div v-for="(service, i) in services" :key="i"
-           class="p-9 border-ink/10"
-           :class="{
-             'border-r': i < services.length - 1,
-             'animate-fade-down': isVisible,
-             'opacity-0': !isVisible
-           }"
+           class="bg-paper p-7 md:p-9"
+           :class="{ 'animate-fade-down': isVisible, 'opacity-0': !isVisible }"
            :style="{ animationDelay: `${i * 0.2}s` }">
         <div class="w-10 h-10 bg-accent-light flex items-center justify-center mb-6">
           <component :is="service.icon" class="w-4.5 h-4.5 text-accent" />
