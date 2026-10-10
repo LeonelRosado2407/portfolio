@@ -117,7 +117,7 @@ const featured = [
       { src: dulceSearch,   alt: () => t('projects.featured.dulce.alt_search'),   ...mobile },
       { src: dulceLightbox, alt: () => t('projects.featured.dulce.alt_lightbox'), ...mobile },
     ],
-    demo: 'https://sweet-tentacion.vercel.app',
+    demo: 'https://dulce.leonelrosado.dev',
     repo: 'https://github.com/LeonelRosado2407/dessert-page',
   },
   {
@@ -137,7 +137,7 @@ const featured = [
       { src: nexusDialog,  alt: () => t('projects.featured.nexus.alt_dialog'),  ...desktop },
       { src: nexusMobile,  alt: () => t('projects.featured.nexus.alt_mobile'),  ...mobile },
     ],
-    demo: 'https://nexus-landing-page-delta.vercel.app',
+    demo: 'https://nexus.leonelrosado.dev',
     repo: 'https://github.com/LeonelRosado2407/Nexus-Landing-Page',
   },
 ]
