@@ -6,7 +6,7 @@ Personal portfolio of **Leonel Rosado**, full-stack developer focused on interfa
 
 ## Features
 
-- Featured personal projects with screenshot galleries, live demos and source links ([Dulce Tentación](https://sweet-tentacion.vercel.app), [Nexus](https://nexus-landing-page-delta.vercel.app))
+- Featured personal projects with screenshot galleries, live demos and source links ([Dulce Tentación](https://dulce.leonelrosado.dev), [Nexus](https://nexus.leonelrosado.dev))
 - Professional experience and client work synced with my CV
 - English / Spanish (`vue-i18n`), remembered per visitor
 - Light / dark theme that follows the OS until the visitor picks one, with no flash on load
